@@ -22,7 +22,7 @@ void clear_row(size_t row) {
   };
   
   for (size_t col = 0; col < NUM_COLS; col++) {
-    buffer[col + NUM_ROWS * ROW] = empty; // This is how index into vram is calculated! col + NUM_ROWS * row will get the index in
+    buffer[col + NUM_ROWS * row] = empty; // This is how index into vram is calculated! col + NUM_ROWS * row will get the index in
     // vram for the current col and row.
     // this also sets the buffer at row, col to the empty char defined above.
   }
@@ -77,7 +77,7 @@ void print_char(char character) {
 
 void print_str(char* str) {
   // Takes in a null-terminated cstr and prints it to the screen
-  for (size_t i = 0; true; i++) { // Loop continues infinitley until break or return
+  for (size_t i = 0; 1; i++) { // Loop continues infinitley until break or return
     char character = (uint8_t) str[i]; // Set character to the current index in the c_str
     
     if (character == "\0") {

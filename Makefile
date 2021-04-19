@@ -21,7 +21,7 @@ $(x86_64_asm_object_files): build/preboot/%.o : src/preboot/%.asm
 	mkdir -p $(dir $@) && \
 	nasm -f elf64 $(patsubst build/preboot/%.o, src/preboot/%.asm, $@) -o $@
 
-.PHONY: build-x86_64-i386
+.PHONY: build-x86_64
 build-x86_64: $(kernel_object_files) $(x86_64_object_files)
 	mkdir -p dist/x86_64 && \
 	./gcc/bin/x86_64-elf-ld -n -o dist/x86_64/shadeos.bin -T targets/x86_64-i386/linker.ld $(kernel_object_files) $(x86_64_object_files) && \
