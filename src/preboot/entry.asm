@@ -36,5 +36,6 @@ check_cpuid:
     pushfd ; Copy flags onto stack so we can check if the bit did flip
     pop eax ; Put stack into EAX for comparison
     push ecx ; Put original flags into stack so we can make sure they remain unchanged
-    popfs
+    popfd; Push original flags back onto the flags register
+    
     
