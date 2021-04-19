@@ -14,7 +14,7 @@ entry_x86:
     call enable_paging
     
     lgdt [gdt64.pointer]
-    jmp gdt64.code_segment:entry_x64
+    jmp gdt64.code_segment:entry_x64 ; Jump into 64 bit entry
     
     hlt
 
