@@ -1,4 +1,4 @@
-ENTRY(start)
+ENTRY(entry_x86)
 
 SECTIONS
 {
