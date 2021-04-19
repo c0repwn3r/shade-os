@@ -1,5 +1,5 @@
 global entry_x86
-external entry_x64
+extern entry_x64
 
 section .text
 bits 32
