@@ -20,7 +20,7 @@ entry_x86:
 
 check_mb2_boot:
     cmp eax, 0x36d76289 ; compare eax to mb2 magic number
-    jne mb2_not_booted
+    jne .mb2_not_booted
     ret
 .mb2_not_booted:
     mov al, "B" ; err code B - boot error

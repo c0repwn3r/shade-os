@@ -27,3 +27,7 @@ build-x86_64: $(kernel_object_files) $(x86_64_object_files)
 	./gcc/bin/x86_64-elf-ld -n -o dist/x86_64/shadeos.bin -T targets/x86_64-i386/linker.ld $(kernel_object_files) $(x86_64_object_files) && \
 	cp dist/x86_64/shadeos.bin targets/x86_64-i386/iso/boot/shadeos.bin && \
 	grub-mkrescue /usr/lib/grub/i386-pc -o dist/x86_64/shadeos.iso targets/x86_64-i386/iso
+
+.PHONY: test
+test: $(build-x86-64)
+	qemu-system-x86_64 -drive file=dist/x86_64/shadeos.iso,index=0,media=disk,format=raw

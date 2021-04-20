@@ -1,10 +1,10 @@
 #pragma once
 
-#include <stdint.h> // Standard integers
-#include <stddef.h> // Standard definitions
+#include <stdint.h>
+#include <stddef.h>
 
-enum { // Print color enum
-  PRINT_COLOR_BLACK = 0,
+enum {
+    PRINT_COLOR_BLACK = 0,
 	PRINT_COLOR_BLUE = 1,
 	PRINT_COLOR_GREEN = 2,
 	PRINT_COLOR_CYAN = 3,

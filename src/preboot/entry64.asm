@@ -1,4 +1,4 @@
-global x64_entry
+global entry_x64
 extern kernel_entry
 
 section .text

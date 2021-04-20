@@ -1,4 +1,4 @@
-.section mb2_header
+section .mb2_header
 header_start:
     ; https://www.gnu.org/software/grub/manual/multiboot2/multiboot.html for more information, section 3.1.1
     dd 0xe85250d6 ; multiboot2 magic number
