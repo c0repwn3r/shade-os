@@ -5,6 +5,14 @@
 
 #include "print.h" // Include print header
 
+enum {
+  LOG_LEVEL_DEBUG = 4;
+  LOG_LEVEL_OK = 3;
+  LOG_LEVEL_WARN = 2;
+  LOG_LEVEL_ERROR = 1;
+  LOG_LEVEL_FATAL = 0;
+}
+
 void kernel_debug(char* string); // [ DEBUG ] Message
 void kernel_ok(char* string); // [ OK ] Message
 void kernel_warn(char* string); // [ WARN ] Message
