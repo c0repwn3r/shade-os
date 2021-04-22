@@ -1,6 +1,7 @@
 #include "print.h"
 #include "shade-ver.h"
 #include "kernel_module_hello_world.h"
+#include "kernel_module_welcome.h"
 
 void kernel_msg_ok(char* msg) {
 	char ok_p1[] = "[ ";
@@ -22,6 +23,7 @@ void load_kernel_modules() {
 	// stage-5 prep-kernel-mods
 	// Call kernel_module_something_load() functions here
 	kernel_module_hello_world_load(); // Initialize kernel module hello_world
+	kernel_module_welcome_load(); // Initialize kernel module "welcome"
 	// stage5 prep-kernel-mods finished, boot sequence completed
 }
 
@@ -29,25 +31,12 @@ void unload_kernel_modules() {
 	// stage-1 unload-kernel-mods
 	// Call kernel_module_something_unload() modules here
 	kernel_module_hello_world_unload();
+	kernel_module_welcome_unload();
 	// proceed to next bootdown stage
 }
 
 void kernel_welcome() {
 	print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
-
-	char wlc[] = "Welcome to ";
-	char wlc2[] = "Shade";
-	char wlc3[] = "!\n";
-
-	print_str(wlc);
-
-	print_set_color(PRINT_COLOR_CYAN, PRINT_COLOR_BLACK);
-	print_str(wlc2);
-	
-	print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
-	print_str(wlc3);
-	
-	print_newline();
 	
 	char version[] = "shadeOS kernel version ";
 	print_str(version);
