@@ -37,5 +37,5 @@ make test
 ```
 
 **Already a developer tutorial:**
-Install grub, base-devel, git, nasm, qemu, make, zip, unzip, wget, and xorriso. Package names for Arch/Artix.
+Install grub, base-devel, git, nasm, qemu, make, zip, unzip, wget, mtools, and xorriso. Package names for Arch/Artix.
 Clone repo, run ./download_dependencies, make build-x86_64. Test with make test.
