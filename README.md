@@ -10,13 +10,13 @@ Go install linux. Learn how to use it.
 **Knows-how-to-open-a-terminal experienced tutorial:**
 Paste this into your favorite terminal. Modify for your linux install. Always be careful when pasting walls of text from the internet.
 ```
-sudo pacman -S --needed grub base-devel git nasm qemu make zip unzip wget xorriso;git clone https://github.com/c0repwn3r/shade-os.git;cd shade-os;./download_dependencies.sh;make build-x86_64;make test
+sudo pacman -S --needed grub base-devel git nasm qemu make zip unzip wget xorriso mtools;git clone https://github.com/c0repwn3r/shade-os.git;cd shade-os;./download_dependencies.sh;make build-x86_64;make test
 ```
 
 **Semi-experienced tutorial:**
 1) Install packages.
 ```
-sudo pacman -S --needed grub base-devel git nasm qemu make zip unzip wget xorriso
+sudo pacman -S --needed grub base-devel git nasm qemu make zip unzip wget xorriso mtools
 ```
 2) Clone repo.
 ```
