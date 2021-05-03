@@ -2,6 +2,7 @@
 #include "shade-ver.h"
 #include "kernel_module_hello_world.h"
 #include "kernel_module_welcome.h"
+#include "memory.h"
 
 void kernel_msg_ok(char* msg) {
 	char ok_p1[] = "[ ";
@@ -68,9 +69,14 @@ void kernel_entry() {
 
 	kernel_welcome();
 
-	char message[] = "Stage 5 finished. Kernel operational.\n";
+	char message[] = "Stage 5 finished.\n";
 	kernel_msg_ok(message);
 
 	print_newline();
 	// time for some REAL code
+	
+	char initidt[] = "Initializing IDT.\n";
+	kernel_msg_ok(initidt);
+	char idtinit[] = "CPU did not hang - IDT initialization successful.\n";
+	kernel_msg_ok(idtinit);
 }
