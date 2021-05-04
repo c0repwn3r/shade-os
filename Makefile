@@ -30,4 +30,5 @@ build-x86_64: $(kernel_object_files) $(x86_64_object_files)
 
 .PHONY: test
 test: $(build-x86-64)
+	echo "Run gdb on another window and type target remove localhost:1234"
 	qemu-system-x86_64 -drive file=dist/x86_64/shadeos.iso,index=0,media=disk,format=raw

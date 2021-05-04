@@ -3,6 +3,7 @@
 #include "kernel_module_hello_world.h"
 #include "kernel_module_welcome.h"
 #include "memory.h"
+#include "idt.h"
 
 void kernel_msg_ok(char* msg) {
 	char ok_p1[] = "[ ";
@@ -35,6 +36,7 @@ void unload_kernel_modules() {
 	kernel_module_welcome_unload();
 	// proceed to next bootdown stage
 }
+
 
 void kernel_welcome() {
 	print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
@@ -77,6 +79,7 @@ void kernel_entry() {
 	
 	char initidt[] = "Initializing IDT.\n";
 	kernel_msg_ok(initidt);
+	initializeIDT();
 	char idtinit[] = "CPU did not hang - IDT initialization successful.\n";
 	kernel_msg_ok(idtinit);
 }
