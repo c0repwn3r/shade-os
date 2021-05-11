@@ -1,0 +1,7 @@
+VFIM (verifiable file image) format spec
+
+Used for kernel images of shadeos
+You can find the latest vfim image on the repo at repo:vfim/latest.vfim.gz
+VFIM images are gzip-compressed
+
+VFIM image format:
